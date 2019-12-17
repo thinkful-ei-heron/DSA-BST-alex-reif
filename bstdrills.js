@@ -166,5 +166,3 @@ function main() {
   // );
 }
 main();
-
-Co-authored-by: Alex Bannow <rbannal@gmail.com>"
