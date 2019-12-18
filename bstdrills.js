@@ -18,9 +18,8 @@ function main() {
   BST.insert(9, 9);
   BST.insert(2, 2);
   BST.insert(5, 5);
-  // BST.insert(7, 7);
+  BST.insert(7, 7);
   // display(BST);
-  // console.log(BST);
 
   let BSTtwo = new BinarySearchTree();
   BSTtwo.insert("E", "E");
@@ -35,7 +34,6 @@ function main() {
   BSTtwo.insert("I", "I");
   BSTtwo.insert("O", "O");
   BSTtwo.insert("N", "N");
-  // console.log(BSTtwo);
 
   let BSTthree = new BinarySearchTree();
   BSTthree.insert("E", "E");
@@ -47,8 +45,6 @@ function main() {
   BSTthree.insert("3", "3");
 
   const bstHeight = (tree, height = 1) => {
-    // console.log(`tval: ${tree.value}`);
-    // console.log(`height: ${height}`);
     if (tree.right == null && tree.left == null) {
       return height;
     }
@@ -64,11 +60,9 @@ function main() {
     }
     return height;
   };
-
   // console.log(bstHeight(BSTthree));
 
   const isItABST = tree => {
-    //if tree.left.key < tree.key && tree.right.key > tree.key
     if (tree.right && tree.left) {
       if (tree.left.key < tree.key || tree.right.key > tree.key) {
         isItABST(tree.right);
@@ -81,7 +75,6 @@ function main() {
     }
     return true;
   };
-
   // console.log(isItABST(BST));
 
   function recursiveGrab(tree, array = []) {
@@ -112,9 +105,6 @@ function main() {
   }
   // console.log(recursiveGrab(BSTtwo));
 
-  // console.log(balanceBST(BST));
-
-  // without bstHeight:
   function balanced(tree, height = 1, highest = 0) {
     let output = true;
     if (height >= highest) highest = height;
